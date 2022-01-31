@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
         print("Projectile Spawned");
         GameObject Projectile = Instantiate(playerAttackProjectile, transform) as GameObject;
         Rigidbody rb = Projectile.GetComponent<Rigidbody>();
-        //rb.velocity = transform.forward * 20;
+        rb.velocity = transform.forward * 20;
 
     }
 }

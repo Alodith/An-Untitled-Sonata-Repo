@@ -25,6 +25,8 @@ public class EnemyScriptBoss : MonoBehaviour
 
     public bool enemyMove = false;
 
+    public GameObject encounterWalls;
+
     #region attackscriptstuff
     public bool attacking = false;
     public GolemBossSpawner spawner;
@@ -108,15 +110,14 @@ public class EnemyScriptBoss : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         if(currentHealth == 0)
         {
+            Destroy(encounterWalls);
+            print("WallDestroyed");
+            //get rid of health bar too
             Die();
             
             
         }
-        if(currentHealth <= 0)
-        {
-            gameObject.GetComponent<EncounterTrigger>().EndEncounter();
-            //not sure if this works
-        }
+        
     }
 
     public void AttackBuild()
