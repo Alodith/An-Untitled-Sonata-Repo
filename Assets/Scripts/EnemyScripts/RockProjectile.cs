@@ -9,7 +9,7 @@ public class RockProjectile : MonoBehaviour
         //Unparent
         transform.parent = null;
         //Start coroutine that destroys the object after 5 seconds
-        //StartCoroutine(WaitForDestroy());
+        StartCoroutine(WaitForDestroy());
 
 
     }
@@ -23,20 +23,25 @@ public class RockProjectile : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
 
-        //if (other.gameObject.tag == "Ground")
-        //{
-            //print("attack hit ground");
-           // Destroy(transform.gameObject);
-      //  }
+        if (other.gameObject.tag == "Ground")
+        {
+            print("attack hit ground");
+            Destroy(transform.gameObject);
+        }
+        if(other.gameObject.tag == "Player")
+        {
+            Destroy(transform.gameObject);
 
+            other.gameObject.GetComponent<PlayerBasic>().TakeDamage(25);
+        }
         
 
     }
 
-    //IEnumerator WaitForDestroy()
-   // {
-        //print("WaitForDestroy started");
-       // yield return new WaitForSeconds(5);
-       // Destroy(transform.gameObject);
-    //}
+    IEnumerator WaitForDestroy()
+    {
+        print("BossWaitForDestroy started");
+        yield return new WaitForSeconds(5);
+        Destroy(transform.gameObject);
+    }
 }
