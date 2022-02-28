@@ -34,13 +34,13 @@ public class EnemyAIScript : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(target.position, transform.position);
-
+        FaceTarget();
         if (distance <= lookRadius)
         {
             agent.SetDestination(target.position);
             if (distance <= agent.stoppingDistance)
             {
-                //attack
+                //attacks
                 Attack();
                 //Play attack animation (trigger the attack to on in the animator)
                 //At the certain point in the animation, spawn an invisible object that oncollisionenter hurts the player
@@ -57,6 +57,7 @@ public class EnemyAIScript : MonoBehaviour
 
     void FaceTarget()
     {
+        print("Facing Target");
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);

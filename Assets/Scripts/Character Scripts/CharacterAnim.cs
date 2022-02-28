@@ -9,6 +9,8 @@ public class CharacterAnim : MonoBehaviour
     public AudioSource attackAudio1;
     public CharAttacking charAttacking;
     public ThirdPersonMovement tPM;
+    public GameObject attackPen;
+    public GameObject healPen;
 
     #endregion
 
@@ -23,9 +25,21 @@ public class CharacterAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        #region attackifs
         //if left click is pressed, Attack
-        if (Input.GetMouseButtonDown(0))
+       // if (Input.GetMouseButtonDown(0))
+           // anim.SetBool("Isattacking", true);
+
+        if(Input.GetMouseButtonDown(0) && (attackPen.activeSelf == true))
+        {
             anim.SetBool("Isattacking", true);
+        }
+
+        if(Input.GetMouseButtonDown(0) && (healPen.activeSelf == true))
+        {
+            anim.SetBool("IsHealing", true);
+        }
+        #endregion
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
@@ -52,6 +66,13 @@ public class CharacterAnim : MonoBehaviour
         
         
     }
+
+    void Heal()
+    {
+        //heal
+        GameObject player = GameObject.Find("Player");
+        charAttacking.healing = true;
+    }
     
     public void AttackStop()
     {
@@ -60,6 +81,13 @@ public class CharacterAnim : MonoBehaviour
         
         
         tPM.speed = 6f;
+    }
+
+    public void HealStop()
+    {
+        anim.SetBool("IsHealing", false);
+        tPM.speed = 6f;
+        
     }
 
     void Dodge()

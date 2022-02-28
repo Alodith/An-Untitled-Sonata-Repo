@@ -6,6 +6,10 @@ public class PlayerBasic : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
+    public Animator anim;
+    public ThirdPersonMovement tpm;
+    public GameObject DeathScreen;
+
 
     public HealthBar healthBar;
     // Start is called before the first frame update
@@ -18,7 +22,10 @@ public class PlayerBasic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+     if(currentHealth <= 0)
+        {
+            Die();
+        }   
     }
 
     public void TakeDamage(int damage)
@@ -26,5 +33,13 @@ public class PlayerBasic : MonoBehaviour
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+    }
+
+    public void Die()
+    {
+        anim.SetBool("Dead", true);
+        tpm.enabled = false;
+        //enable death screen
+        DeathScreen.SetActive(true);
     }
 }

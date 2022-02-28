@@ -8,6 +8,8 @@ public class CharAttacking : MonoBehaviour
     public Spawner spawner;
     public MusicManager mM;
     public AudioSource attackMusicAudio;
+    public bool healing = false;
+    public AudioSource healMusicAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,12 @@ public class CharAttacking : MonoBehaviour
             mM.AddToQueue(new MusicMessage(gameObject, "AttackSound", true));
             //mM.QueueOrNearBeat(5, new MusicMessage(gameObject, "Attacking", false));
             Attacking();
+        }
+        
+        if(healing == true)
+        {
+            mM.AddToQueue(new MusicMessage(gameObject, "HealSound", true));
+            Healing();
         }
     }
 
@@ -38,5 +46,16 @@ public class CharAttacking : MonoBehaviour
         attackMusicAudio.Play(0);
         Debug.Log("AttackBeat");
         
+    }
+    public void Healing()
+    {
+        print("healing");
+        //heal
+        healing = false;
+    }
+    public void HealSound()
+    {
+        healMusicAudio.Play(0);
+        Debug.Log("HealBeat");
     }
 }
