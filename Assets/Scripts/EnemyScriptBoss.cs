@@ -14,6 +14,7 @@ public class EnemyScriptBoss : MonoBehaviour
     public float timeBetweenAttacks;
     bool alreadyAttacked;
 
+    public bool Aggro = false;
     public bool BossIsDead = false;
     Animator a_animator;
 
@@ -26,6 +27,10 @@ public class EnemyScriptBoss : MonoBehaviour
     public bool enemyMove = false;
 
     public GameObject encounterWalls;
+
+
+    public GameObject enemyUI;
+
 
     #region attackscriptstuff
     public bool attacking = false;
@@ -56,6 +61,7 @@ public class EnemyScriptBoss : MonoBehaviour
         if (distance <= lookRadius)
         {
             agent.SetDestination(player.position);
+            Aggro = true;
             enemyMove = true;
             if (distance <= agent.stoppingDistance)
             {
@@ -83,6 +89,11 @@ public class EnemyScriptBoss : MonoBehaviour
         {
             //set anim
             a_animator.SetFloat("Vertical", 0);
+        }
+
+        if (Aggro == true)
+        {
+            enemyUI.SetActive(true);
         }
     }
 

@@ -26,10 +26,12 @@ public class RockProjectile : MonoBehaviour
         if (other.gameObject.tag == "Ground")
         {
             print("attack hit ground");
+            //camerashake
             Destroy(transform.gameObject);
         }
         if(other.gameObject.tag == "Player")
         {
+            //camerashake
             Destroy(transform.gameObject);
 
             other.gameObject.GetComponent<PlayerBasic>().TakeDamage(25);

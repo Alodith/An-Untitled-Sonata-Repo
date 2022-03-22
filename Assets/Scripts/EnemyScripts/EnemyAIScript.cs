@@ -11,13 +11,21 @@ public class EnemyAIScript : MonoBehaviour
     Transform target;
     NavMeshAgent agent;
 
+    public int damageToDeal = 10;
+
     public int maxHealth = 30;
     public int currentHealth;
 
+    public bool Aggro = false;
+    public CharAttacking charAttacking;
+
+    public HealthBar healthBar;
+    public Canvas enemyCanvas;
     
 
     Animator a_animator;
 
+    public ShroomProjSpawner spawner;
 
 
     // Start is called before the first frame update
@@ -28,17 +36,29 @@ public class EnemyAIScript : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         a_animator = gameObject.GetComponent<Animator>();
         a_animator.SetBool("Attack", false);
+        
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+
+       
+
+
         float distance = Vector3.Distance(target.position, transform.position);
         FaceTarget();
         if (distance <= lookRadius)
         {
             agent.SetDestination(target.position);
-            if (distance <= agent.stoppingDistance)
+            Aggro = true;
+            
+
+
+            
+            if (distance <= agent.stoppingDistance + 5f)
             {
                 //attacks
                 Attack();
@@ -49,10 +69,28 @@ public class EnemyAIScript : MonoBehaviour
                 FaceTarget();
             }
         }
+        
+        if (Aggro == true) { agent.SetDestination(target.position); enemyCanvas.enabled = true; lookRadius = 50f; distance = lookRadius; }
+
+
+        
         if (currentHealth <= 0)
         {
+            Aggro = false;
+            // GameObject player = GameObject.Find("Player");
+            //charAttacking = player.GetComponentInChildren<CharAttacking>();
+            // charAttacking.pulledAggro = false;
+            enemyCanvas.enabled = false;
             Die();
+            
         }
+       
+        if(currentHealth != maxHealth) 
+        { 
+            Aggro = true; 
+        }
+
+        
     }
 
     void FaceTarget()
@@ -72,6 +110,7 @@ public class EnemyAIScript : MonoBehaviour
     public void HitByProjectile(int damage)
     {
         currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
         print("Enemy Was Hit");
 
         if(currentHealth <= 0)
@@ -82,23 +121,31 @@ public class EnemyAIScript : MonoBehaviour
     }
     void Die()
     {
+        Aggro = false;
+        GameObject player = GameObject.Find("Player");
+        charAttacking = player.GetComponentInChildren<CharAttacking>();
         
         a_animator.SetBool("Die", true);
         agent.enabled = false;
 
         enabled = false;
-
+        Aggro = false;
     }
+
+
+
     #region Attacks
     public void Attack()
     {
         FaceTarget();
         a_animator.SetBool("Attack", true);
+        
+
     }
-    public void AttackSpawn()
+
+    public void FireAttack()
     {
-        //enable attack object
-        FaceTarget();
+        spawner.SpawnAttack();
     }
 
     public void AttackStop()

@@ -37,6 +37,12 @@ public class MusicManager : MonoBehaviour
     // All the messages to send on the beat
     public List<MusicMessage> _onBeat = new List<MusicMessage>();
 
+    public GameObject[] enemies;
+
+    private bool anyaggro = false;
+
+    public GameObject AggroAudioObj;
+
     void Update()
     {
         // Countdown till the beat happens
@@ -61,6 +67,16 @@ public class MusicManager : MonoBehaviour
             // Reset the beat
             _tillBeat = _betweenBeat + _tillBeat;
         }
+
+
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        anyaggro = false;
+        foreach(GameObject enemy in enemies)
+        {
+            if (enemy.GetComponent<EnemyAIScript>().Aggro) { anyaggro = true; print("Anyaggro true"); }
+        }
+        if(anyaggro == true) { AggroAudioObj.SetActive(true); }
+        else { AggroAudioObj.SetActive(false); }
     }
 
     // Add a message to the queue, to happen when the beat happens

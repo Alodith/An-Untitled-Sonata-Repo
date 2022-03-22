@@ -45,7 +45,7 @@ public class CharacterAnim : MonoBehaviour
         {
             print("Dodge");
             anim.SetBool("Dodge", true);
-            Dodge();
+            
         }
     }
 

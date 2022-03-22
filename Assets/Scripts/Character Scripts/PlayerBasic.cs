@@ -26,6 +26,13 @@ public class PlayerBasic : MonoBehaviour
         {
             Die();
         }   
+
+
+
+     if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
     }
 
     public void TakeDamage(int damage)
@@ -41,5 +48,14 @@ public class PlayerBasic : MonoBehaviour
         tpm.enabled = false;
         //enable death screen
         DeathScreen.SetActive(true);
+    }
+
+    public void Heal(int amount)
+    {
+
+        print("healing");
+        currentHealth += amount;
+
+        healthBar.SetHealth(currentHealth);
     }
 }

@@ -571,10 +571,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookRadius: 20
   timeBetweenAttacks: 1
+  Aggro: 0
   BossIsDead: 0
   healthBar: {fileID: 1725399098}
   maxHealth: 100
   currentHealth: 0
+  enemyMove: 0
+  encounterWalls: {fileID: 0}
+  enemyUI: {fileID: 1056755119}
+  attacking: 0
+  spawner: {fileID: 0}
+  mM: {fileID: 0}
+  attackMusicAudio: {fileID: 0}
 --- !u!195 &1987970596
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -7,9 +7,15 @@ public class CharAttacking : MonoBehaviour
     public bool attacking = false;
     public Spawner spawner;
     public MusicManager mM;
-    public AudioSource attackMusicAudio;
+    
     public bool healing = false;
-    public AudioSource healMusicAudio;
+    
+    
+
+    //bool for music
+    
+    //Audio GameObject
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +25,8 @@ public class CharAttacking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if(attacking == true)
         {
             mM.AddToQueue(new MusicMessage(gameObject, "AttackSound", true));
@@ -43,7 +51,9 @@ public class CharAttacking : MonoBehaviour
     public void AttackSound()
     {
         //SoundHere
-        attackMusicAudio.Play(0);
+        
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Attacks/AttackPitchTest", GetComponent<Transform>().position);
+        
         Debug.Log("AttackBeat");
         
     }
@@ -51,11 +61,14 @@ public class CharAttacking : MonoBehaviour
     {
         print("healing");
         //heal
+        GetComponentInParent<PlayerBasic>().Heal(10);
         healing = false;
     }
     public void HealSound()
     {
-        healMusicAudio.Play(0);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Heals/HealMulti", GetComponent<Transform>().position);
         Debug.Log("HealBeat");
     }
+
+    
 }
