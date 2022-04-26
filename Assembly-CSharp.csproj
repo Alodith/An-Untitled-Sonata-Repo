@@ -63,6 +63,7 @@
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\EdgeDetection.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\BuiltinDebugViewsComponent.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\ShroomProjSpawner.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\RockProjectile.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\ContrastEnhance.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\Blur.cs" />
@@ -70,6 +71,8 @@
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
     <Compile Include="Assets\Scripts\ProjectileScript.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\SunShafts.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\ShroomShot.cs" />
+    <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\MouseCamLook.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
@@ -115,11 +118,13 @@
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\NoiseAndGrain.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\BloomOptimized.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\DepthOfField.cs" />
+    <Compile Include="Assets\BrokenVector\LowPolyFencePack\Scripts\DoorToggle.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\NoiseAndScratches.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\ScreenSpaceAmbientOcclusion.cs" />
     <Compile Include="Assets\Scripts\EnemyScriptBoss.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
+    <Compile Include="Assets\BrokenVector\LowPolyFencePack\Scripts\DoorController.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\DitheringComponent.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
@@ -132,6 +137,7 @@
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\Twirl.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\ContrastStretch.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
+    <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\ScreenshotMaker.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\ChromaticAberrationModel.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\Quads.cs" />
@@ -140,8 +146,10 @@
     <Compile Include="Assets\Flooded_Grounds\Scripts\DisableRenderer.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\DepthOfFieldComponent.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\Billboard.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
     <Compile Include="Assets\ShroomAnimTest.cs" />
+    <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Character Scripts\CharacterAnim.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\TiltShift.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\FogComponent.cs" />
@@ -162,9 +170,7 @@
     <Compile Include="Assets\Scripts\CanvasScripts\MenuCanvas.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\Triangles.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\DitheringModel.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\Billboard.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\ShroomProjSpawner.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\ShroomShot.cs" />
+    <Compile Include="Assets\Scripts\LevelChangingCollider\LevelChangeCollider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
@@ -204,6 +210,7 @@
     <None Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\TwirlEffect.shader" />
     <None Include="Assets\Flooded_Grounds\Resources\TreeCreator\TreeCreatorBark.shader" />
     <None Include="Assets\Imported Assets\NatureStarterKit2\info.txt" />
+    <None Include="Assets\BrokenVector\LowPolyShaders\README.txt" />
     <None Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
     <None Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
     <None Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
