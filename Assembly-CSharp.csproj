@@ -76,6 +76,7 @@
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
+    <Compile Include="Assets\Scripts\LevelChangingCollider\LevelChangeCollider.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsHelper.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />
@@ -170,7 +171,7 @@
     <Compile Include="Assets\Scripts\CanvasScripts\MenuCanvas.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\Triangles.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\DitheringModel.cs" />
-    <Compile Include="Assets\Scripts\LevelChangingCollider\LevelChangeCollider.cs" />
+    <Compile Include="Assets\StartMusic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />

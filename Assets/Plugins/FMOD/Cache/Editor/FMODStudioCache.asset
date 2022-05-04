@@ -43,6 +43,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1012
   Exists: 1
+--- !u!114 &-5320154974105062923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background/BM1
+  m_EditorClassIdentifier: 
+  Path: event:/Background/BM1
+  guid: fab088e0bc79954ab807d6a50a97c093
+  Banks:
+  - {fileID: 6875817223174942662}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 11250
 --- !u!114 &-5234400202819510450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,6 +89,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-2746151176574138563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background/BGM1
+  m_EditorClassIdentifier: 
+  Path: event:/Background/BGM1
+  guid: 72936803e45cc541aeb157fb51e9f761
+  Banks:
+  - {fileID: 6875817223174942662}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11250
 --- !u!114 &-2701602092488646796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,12 +198,14 @@ MonoBehaviour:
   - {fileID: 1823994486014969430}
   - {fileID: -2701602092488646796}
   - {fileID: -5234400202819510450}
+  - {fileID: -2746151176574138563}
+  - {fileID: -5320154974105062923}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6875817223174942662}
   StringsBanks:
   - {fileID: 7118428135186467682}
-  stringsBankWriteTime: 637819641700268131
+  stringsBankWriteTime: 637872101147938564
   cacheVersion: 8
 --- !u!114 &1823994486014969430
 MonoBehaviour:
@@ -260,10 +308,10 @@ MonoBehaviour:
   Path: FMOD/USFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637819641700248127
+  lastModified: 637872101147923568
   FileSizes:
   - Name: Desktop
-    Value: 1974912
+    Value: 2104352
   Exists: 1
 --- !u!114 &7118428135186467682
 MonoBehaviour:
@@ -280,8 +328,8 @@ MonoBehaviour:
   Path: FMOD/USFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637819641700268131
+  lastModified: 637872101147938564
   FileSizes:
   - Name: Desktop
-    Value: 968
+    Value: 1060
   Exists: 1
