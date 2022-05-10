@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{f528491c-217e-4ba6-ac21-e14f3df405ae}">
+		<property name="assetPath">
+			<value>Seagulls.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>61.622857142857143</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9b2768b1-bbfe-4ed6-af20-559fe37c5937}</destination>
+		</relationship>
+	</object>
+</objects>

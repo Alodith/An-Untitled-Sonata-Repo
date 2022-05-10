@@ -26,12 +26,14 @@ public class ProjectileScript : MonoBehaviour
         
         if(other.gameObject.tag == "Ground")
         {
+            FMODUnity.RuntimeManager.PlayOneShot("Event:/Impact/PlayerProjectile", transform.position);
             print("attack hit ground");
             Destroy(transform.gameObject);
         }
 
         if(other.gameObject.tag == "Enemy")
         {
+            FMODUnity.RuntimeManager.PlayOneShot("Event:/Impact/PlayerProjectile", transform.position);
             Destroy(transform.gameObject);
             other.gameObject.GetComponent<EnemyAIScript>().HitByProjectile(10);
             
@@ -39,10 +41,11 @@ public class ProjectileScript : MonoBehaviour
         }
         if (other.gameObject.tag == "EnemyBoss")
         {
+            FMODUnity.RuntimeManager.PlayOneShot("Event:/Impact/PlayerProjectile", transform.position);
             Destroy(transform.gameObject);
             
             other.gameObject.GetComponent<EnemyScriptBoss>().HitByProjectile(10);
-
+            
         }
 
     }
@@ -51,6 +54,7 @@ public class ProjectileScript : MonoBehaviour
     {
         print("WaitForDestroy started");
         yield return new WaitForSeconds(5);
+        FMODUnity.RuntimeManager.PlayOneShot("Event:/Impact/PlayerProjectile", transform.position);
         Destroy(transform.gameObject);
     }
 }

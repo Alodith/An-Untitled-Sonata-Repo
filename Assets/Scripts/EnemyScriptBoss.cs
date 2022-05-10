@@ -37,6 +37,8 @@ public class EnemyScriptBoss : MonoBehaviour
     public GolemBossSpawner spawner;
     public MusicManager mM;
     public AudioSource attackMusicAudio;
+
+    public GameObject piano;
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -131,6 +133,15 @@ public class EnemyScriptBoss : MonoBehaviour
         
     }
 
+    public void Step()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("Event:/Movement/BossEnemyMove", transform.position);
+    }
+
+    public void GrabRock()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("Event:/Interactions/BossRockGrab", transform.position);
+    }
     public void AttackBuild()
     {
         print("enemy attack building");
@@ -142,6 +153,7 @@ public class EnemyScriptBoss : MonoBehaviour
     }
     public void Attack()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("Event:/Interactions/BossRockThrow", transform.position);
         print("enemy attacks");
         //spawn rock
         spawner.SpawnAttack();
@@ -152,7 +164,7 @@ public class EnemyScriptBoss : MonoBehaviour
         print("Enemy Dead");
         navMesh.enabled = false;       
         a_animator.SetBool("deadBoss", true);
-        
+        piano.SetActive(true);
         enabled = false;
     }
     #endregion

@@ -83,7 +83,7 @@ Transform:
   - {fileID: 2710149573593504785}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 23.48, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &6233362659565547710
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120b1917a4807464b8a7a9fd17bc0f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 5
+  lookRadius: 18.29
   damageToDeal: 10
   maxHealth: 40
   currentHealth: 0
@@ -197,6 +197,7 @@ MonoBehaviour:
   charAttacking: {fileID: 0}
   healthBar: {fileID: 3658898347596165675}
   enemyCanvas: {fileID: 7002797917803367813}
+  walking: 0
   spawner: {fileID: 2260834262404270067}
 --- !u!95 &335316647
 Animator:

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{4b65d715-c7fa-4f6d-9053-36fe46e045a0}">
+		<property name="assetPath">
+			<value>Boss enemy movemet.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.9248526077097505</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9b2768b1-bbfe-4ed6-af20-559fe37c5937}</destination>
+		</relationship>
+	</object>
+</objects>

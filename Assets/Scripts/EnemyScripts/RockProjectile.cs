@@ -25,12 +25,14 @@ public class RockProjectile : MonoBehaviour
 
         if (other.gameObject.tag == "Ground")
         {
+            FMODUnity.RuntimeManager.PlayOneShot("Event:/Interactions/BossRockImpact", transform.position);
             print("attack hit ground");
             //camerashake
             Destroy(transform.gameObject);
         }
         if(other.gameObject.tag == "Player")
         {
+            FMODUnity.RuntimeManager.PlayOneShot("Event:/Interactions/BossRockImpact", transform.position);
             //camerashake
             Destroy(transform.gameObject);
 
@@ -44,6 +46,7 @@ public class RockProjectile : MonoBehaviour
     {
         print("BossWaitForDestroy started");
         yield return new WaitForSeconds(5);
+        FMODUnity.RuntimeManager.PlayOneShot("Event:/Interactions/BossRockImpact", transform.position);
         Destroy(transform.gameObject);
     }
 }

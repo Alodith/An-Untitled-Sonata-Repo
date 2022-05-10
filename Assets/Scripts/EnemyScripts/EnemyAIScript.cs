@@ -21,7 +21,8 @@ public class EnemyAIScript : MonoBehaviour
 
     public HealthBar healthBar;
     public Canvas enemyCanvas;
-    
+
+    public bool walking = false;
 
     Animator a_animator;
 
@@ -57,7 +58,7 @@ public class EnemyAIScript : MonoBehaviour
             
 
 
-            
+
             if (distance <= agent.stoppingDistance + 5f)
             {
                 //attacks
@@ -70,9 +71,10 @@ public class EnemyAIScript : MonoBehaviour
             }
         }
         
-        if (Aggro == true) { agent.SetDestination(target.position); enemyCanvas.enabled = true; lookRadius = 50f; distance = lookRadius; }
+        if (Aggro == true) { agent.SetDestination(target.position); enemyCanvas.enabled = true; lookRadius = 50f; distance = lookRadius;  } 
+        
 
-
+        
         
         if (currentHealth <= 0)
         {
@@ -124,7 +126,7 @@ public class EnemyAIScript : MonoBehaviour
         Aggro = false;
         GameObject player = GameObject.Find("Player");
         charAttacking = player.GetComponentInChildren<CharAttacking>();
-        
+        step();
         a_animator.SetBool("Die", true);
         agent.enabled = false;
 
@@ -137,6 +139,7 @@ public class EnemyAIScript : MonoBehaviour
     #region Attacks
     public void Attack()
     {
+        
         FaceTarget();
         a_animator.SetBool("Attack", true);
         
@@ -145,6 +148,7 @@ public class EnemyAIScript : MonoBehaviour
 
     public void FireAttack()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("Event:/Interactions/GruntEnemyShoot", transform.position);
         spawner.SpawnAttack();
     }
 
@@ -155,4 +159,9 @@ public class EnemyAIScript : MonoBehaviour
         FaceTarget();
     }
     #endregion
+
+    public void step()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("Event:/Movement/GruntEnemyMove", transform.position);
+    }
 }

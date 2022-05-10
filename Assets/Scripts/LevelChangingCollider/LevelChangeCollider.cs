@@ -15,6 +15,7 @@ public class LevelChangeCollider : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                FMODUnity.RuntimeManager.WaitForAllLoads();
             }
         }
         

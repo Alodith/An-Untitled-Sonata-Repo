@@ -123,6 +123,7 @@
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\NoiseAndScratches.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\ScreenSpaceAmbientOcclusion.cs" />
+    <Compile Include="Assets\StartMusic.cs" />
     <Compile Include="Assets\Scripts\EnemyScriptBoss.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
     <Compile Include="Assets\BrokenVector\LowPolyFencePack\Scripts\DoorController.cs" />
@@ -152,6 +153,7 @@
     <Compile Include="Assets\ShroomAnimTest.cs" />
     <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Character Scripts\CharacterAnim.cs" />
+    <Compile Include="Assets\TargetScript.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\TiltShift.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\FogComponent.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\BloomModel.cs" />
@@ -171,7 +173,7 @@
     <Compile Include="Assets\Scripts\CanvasScripts\MenuCanvas.cs" />
     <Compile Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\Triangles.cs" />
     <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\DitheringModel.cs" />
-    <Compile Include="Assets\StartMusic.cs" />
+    <Compile Include="Assets\RockDestroyMe.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Imported Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />

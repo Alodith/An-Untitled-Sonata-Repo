@@ -58,7 +58,7 @@ public class CharacterAnim : MonoBehaviour
     {        
         //Attack animation trigger
         isattacking1 = true;
-        
+        FMODUnity.RuntimeManager.PlayOneShot("Event:/Interactions/PlayerAttackShoot", transform.position);
         //Link to an attack script
         GameObject player = GameObject.Find("Player");
         charAttacking.attacking = true;
@@ -72,6 +72,7 @@ public class CharacterAnim : MonoBehaviour
         //heal
         GameObject player = GameObject.Find("Player");
         charAttacking.healing = true;
+        FMODUnity.RuntimeManager.PlayOneShot("Event:/Interactions/PlayerHealShoot", transform.position);
     }
     
     public void AttackStop()
@@ -107,5 +108,12 @@ public class CharacterAnim : MonoBehaviour
     public void StepSound()
     {
         //Play Step Here
+        FMODUnity.RuntimeManager.PlayOneShot("Event:/Movement/PlayerMove", transform.position);
+    }
+
+    public void DodgeSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("Event:/Impact/Playerdodge", transform.position);
+        
     }
 }

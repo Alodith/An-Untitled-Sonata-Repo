@@ -12,16 +12,28 @@ public class PlayerBasic : MonoBehaviour
 
 
     public HealthBar healthBar;
+    
+    public float health;
+    
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        
+        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+
+     if(currentHealth<= 50)
+        {
+           GetComponent<FMODUnity.StudioParameterTrigger>().TriggerParameters();
+        }
+
      if(currentHealth <= 0)
         {
             Die();

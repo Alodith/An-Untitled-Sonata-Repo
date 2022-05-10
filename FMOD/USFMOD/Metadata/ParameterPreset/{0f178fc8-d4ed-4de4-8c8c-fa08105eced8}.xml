@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{0f178fc8-d4ed-4de4-8c8c-fa08105eced8}">
+		<property name="name">
+			<value>Aggr</value>
+		</property>
+		<relationship name="folder">
+			<destination>{90d8bdde-d922-4504-a18c-848fb03e8b9d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{53bbd986-bfcc-4690-a208-7311bbbb7983}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{53bbd986-bfcc-4690-a208-7311bbbb7983}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

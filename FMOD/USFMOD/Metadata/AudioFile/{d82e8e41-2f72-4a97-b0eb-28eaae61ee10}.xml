@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{d82e8e41-2f72-4a97-b0eb-28eaae61ee10}">
+		<property name="assetPath">
+			<value>Boss enemy grab rock.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.4202916666666665</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9b2768b1-bbfe-4ed6-af20-559fe37c5937}</destination>
+		</relationship>
+	</object>
+</objects>
