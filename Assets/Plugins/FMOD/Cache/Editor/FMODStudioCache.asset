@@ -1982,6 +1982,28 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 0
   Exists: 0
+--- !u!114 &-6543089428042970269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BossMusic/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 100
+  Default: 100
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &-6523997460350267102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2420,7 +2442,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -5100011774262308268}
+  - {fileID: 3811916515066973190}
   MinDistance: 0
   MaxDistance: 0
   Length: 50725
@@ -2713,6 +2735,28 @@ MonoBehaviour:
   IsGlobal: 0
   Exists: 0
 --- !u!114 &-5182016135160370003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Pianobackgroundfull/Aggr
+  m_EditorClassIdentifier: 
+  Name: Aggr
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &-5181987843634019978
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3769,6 +3813,28 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 0
   Exists: 0
+--- !u!114 &-3363406150326954973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Pianobackgroundfull/Parameter 1
+  m_EditorClassIdentifier: 
+  Name: Parameter 1
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &-3341371235972771423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4475,6 +4541,28 @@ MonoBehaviour:
   IsGlobal: 0
   Exists: 0
 --- !u!114 &-2285389530885013185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Pianobackgroundfull/Parameter 1
+  m_EditorClassIdentifier: 
+  Name: Parameter 1
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &-2267403396718397399
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7934,6 +8022,28 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 0
   Exists: 0
+--- !u!114 &3811916515066973190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BossMusic/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 100
+  Default: 100
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &3843158482547444996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8413,8 +8523,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 54722820545313927}
-  - {fileID: -7611940860524212405}
+  - {fileID: -3363406150326954973}
+  - {fileID: 7349472211445874108}
   MinDistance: 0
   MaxDistance: 0
   Length: 34998
@@ -9772,6 +9882,28 @@ MonoBehaviour:
   m_Name: parameter:/Pianobackgroundfull/Parameter 1
   m_EditorClassIdentifier: 
   Name: Parameter 1
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 1
+--- !u!114 &7349472211445874108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Pianobackgroundfull/Aggr
+  m_EditorClassIdentifier: 
+  Name: Aggr
   Min: 0
   Max: 1
   Default: 0
