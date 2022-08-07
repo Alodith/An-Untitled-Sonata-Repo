@@ -28,15 +28,14 @@ public class PlayerBasic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-     if(currentHealth<= 50)
-        {
-           GetComponent<FMODUnity.StudioParameterTrigger>().TriggerParameters();
-        }
+        print("Update");
+     
 
      if(currentHealth <= 0)
         {
+            print("Dead");
             Die();
+
         }   
 
 
